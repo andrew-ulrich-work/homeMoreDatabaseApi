@@ -40,9 +40,11 @@ var atRiskResponse = {
 							"type": "string"
 						}
 					}
-				}
+				},
+        "required":["text","amountRaised","amountNeeded","dueDate","contributors"]
 			}
-		}
+		},
+    "required":["description","followers","stories"]
 	}
 };
 module.exports = {
