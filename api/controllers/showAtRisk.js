@@ -48,7 +48,7 @@ var atRiskResponse = {
 	}
 };
 module.exports = {
-  show: show
+  showAllAtRisk: showAllAtRisk
 };
 
 function show(req,res) {
@@ -56,3 +56,10 @@ var fakeData=faker(atRiskResponse);
   res.json(fakeData);
 }
 
+function showAllAtRisk(req,res) {
+var fakeData=[];
+for(var i =0; i< 10; i++) {
+  fakeData.push(faker(atRiskResponse));
+}
+  res.json(fakeData);
+}

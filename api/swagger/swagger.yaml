@@ -207,6 +207,26 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+  /atRisk:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: showAtRisk
+    get:
+      description: Returns a list of 10 available HUD HMIS-compliant json objects
+      operationId: showAllAtRisk
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/atRiskResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
