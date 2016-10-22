@@ -83,7 +83,7 @@
     "DE#": "4.21.1",
     "Name": "ConnectionWithSOAR",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -179,7 +179,7 @@
     "DE#": "4.38.1",
     "Name": "FamilyReunificationAchieved",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },

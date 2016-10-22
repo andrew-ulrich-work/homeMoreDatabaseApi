@@ -35,7 +35,7 @@
     "DE#": "4.11.2",
     "Name": "DomesticViolenceVictim",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -75,7 +75,7 @@
     "DE#": "4.30.1",
     "Name": "PregnancyStatus",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },

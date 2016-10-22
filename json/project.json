@@ -35,7 +35,7 @@
     "DE#": "2.4.1",
     "Name": "ContinuumProject",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "",
     "Notes": ""
   },
@@ -51,7 +51,7 @@
     "DE#": "2.4.A",
     "Name": "ResidentialAffiliation",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": "Null if ProjectType <> 6"
   },

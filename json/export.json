@@ -115,7 +115,7 @@
     "DE#":"",
     "Name": "ExportPeriodType",
     "Type": "I",
-    "List": 1.1,
+    "List": "1.1",
     "Null": "",
     "Notes": ""
   },
@@ -123,7 +123,7 @@
     "DE#":"",
     "Name": "ExportDirective",
     "Type": "I",
-    "List": 1.2,
+    "List": "1.2",
     "Null": "Y",
     "Notes": ""
   }

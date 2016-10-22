@@ -83,47 +83,47 @@
     "DE#": "3.4.1",
     "Name": "AmIndAKNative",
     "Type": "I",
-    "List": 1.7,
-    "Null": 1,
-    "Notes": "= American Indian or Alaska Native"
+    "List": "1.7",
+    "Null": "",
+    "Notes": "1= American Indian or Alaska Native"
   },
   {
     "DE#": "3.4.1",
     "Name": "Asian",
     "Type": "I",
-    "List": 1.7,
-    "Null": 1,
-    "Notes": "= Asian"
+    "List": "1.7",
+    "Null": "",
+    "Notes": "1= Asian"
   },
   {
     "DE#": "3.4.1",
     "Name": "BlackAfAmerican",
     "Type": "I",
-    "List": 1.7,
-    "Null": 1,
-    "Notes": "= Black or African American"
+    "List": "1.7",
+    "Null": "",
+    "Notes": "1= Black or African American"
   },
   {
     "DE#": "3.4.1",
     "Name": "NativeHIOtherPacific",
     "Type": "I",
-    "List": 1.7,
-    "Null": 1,
-    "Notes": "= Native Hawaiian or Other Pacific Islander"
+    "List": "1.7",
+    "Null": "",
+    "Notes": "1= Native Hawaiian or Other Pacific Islander"
   },
   {
     "DE#": "3.4.1",
     "Name": "White",
     "Type": "I",
-    "List": 1.7,
-    "Null": 1,
-    "Notes": "= White"
+    "List": "1.7",
+    "Null": "",
+    "Notes": "1= White"
   },
   {
     "DE#": "3.4.1",
     "Name": "RaceNone",
     "Type": "I",
-    "List": 1.6,
+    "List": "1.6",
     "Null": "Y",
     "Notes": "Non-null only if all other Race fields = 0 or"
   },
@@ -155,7 +155,7 @@
     "DE#": "3.7.1",
     "Name": "VeteranStatus",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "",
     "Notes": "Export 99 (Data not collected) for all clients"
   },
@@ -179,7 +179,7 @@
     "DE#": "4.41.3",
     "Name": "WorldWarII",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -187,7 +187,7 @@
     "DE#": "4.41.4",
     "Name": "KoreanWar",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -195,7 +195,7 @@
     "DE#": "4.41.5",
     "Name": "VietnamWar",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -203,7 +203,7 @@
     "DE#": "4.41.6",
     "Name": "DesertStorm",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -211,7 +211,7 @@
     "DE#": "4.41.7",
     "Name": "AfghanistanOEF",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -219,7 +219,7 @@
     "DE#": "4.41.8",
     "Name": "IraqOIF",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -227,7 +227,7 @@
     "DE#": "4.41.9",
     "Name": "IraqOND",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -235,7 +235,7 @@
     "DE#": "4.41.10",
     "Name": "OtherTheater",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },

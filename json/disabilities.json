@@ -35,7 +35,7 @@
     "DE#": "",
     "Name": "DisabilityType",
     "Type": "I",
-    "List": 1.3,
+    "List": "1.3",
     "Null": "",
     "Notes": ""
   },
@@ -51,7 +51,7 @@
     "DE#": "",
     "Name": "IndefiniteAndImpairs",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -59,7 +59,7 @@
     "DE#": "",
     "Name": "DocumentationOnFile",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -67,7 +67,7 @@
     "DE#": "",
     "Name": "ReceivingServices",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },

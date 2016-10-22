@@ -35,7 +35,7 @@
     "DE#": "4.2.2",
     "Name": "IncomeFromAnySource",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -51,7 +51,7 @@
     "DE#": "4.2.3",
     "Name": "Earned",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -67,7 +67,7 @@
     "DE#": "4.2.",
     "Name": "Unemployment",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -83,7 +83,7 @@
     "DE#": "4.2.",
     "Name": "SSI",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -99,7 +99,7 @@
     "DE#": "4.2.",
     "Name": "SSDI",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -115,7 +115,7 @@
     "DE#": "4.2.7",
     "Name": "VADisabilityService",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -131,7 +131,7 @@
     "DE#": "4.2.8",
     "Name": "VADisabilityNonService",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -147,7 +147,7 @@
     "DE#": "4.2.9",
     "Name": "PrivateDisability",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -163,7 +163,7 @@
     "DE#": "4.2.10",
     "Name": "WorkersComp",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -179,7 +179,7 @@
     "DE#": "4.2.11",
     "Name": "TANF",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -195,7 +195,7 @@
     "DE#": "4.2.12",
     "Name": "GA",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -211,7 +211,7 @@
     "DE#": "4.2.13",
     "Name": "SocSecRetirement",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -227,7 +227,7 @@
     "DE#": "4.2.14",
     "Name": "Pension",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -243,7 +243,7 @@
     "DE#": "4.2.15",
     "Name": "ChildSupport",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -259,7 +259,7 @@
     "DE#": "4.2.16",
     "Name": "Alimony",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -275,7 +275,7 @@
     "DE#": "4.2.17",
     "Name": "OtherIncomeSource",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -299,7 +299,7 @@
     "DE#": "4.3.2",
     "Name": "BenefitsFromAnySource",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -307,7 +307,7 @@
     "DE#": "4.3.3",
     "Name": "SNAP",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "y",
     "Notes": ""
   },
@@ -315,7 +315,7 @@
     "DE#": "4.3.4",
     "Name": "WIC",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -323,7 +323,7 @@
     "DE#": "4.3.5",
     "Name": "TANFChildCare",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -331,7 +331,7 @@
     "DE#": "4.3.6",
     "Name": "TANFTransportation",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -339,7 +339,7 @@
     "DE#": "4.3.7",
     "Name": "OtherTANF",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -347,7 +347,7 @@
     "DE#": "4.3.8",
     "Name": "RentalAssistanceOngoing",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -355,7 +355,7 @@
     "DE#": "4.3.10",
     "Name": "RentalAssistanceTemp",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -363,7 +363,7 @@
     "DE#": "4.3.9",
     "Name": "OtherBenefitsSource",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -379,7 +379,7 @@
     "DE#": "4.4.2",
     "Name": "InsuranceFromAnySource",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -387,7 +387,7 @@
     "DE#": "4.4.3",
     "Name": "Medicaid",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -403,7 +403,7 @@
     "DE#": "4.4.4",
     "Name": "Medicare",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -419,7 +419,7 @@
     "DE#": "4.4.5",
     "Name": "SCHIP",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -435,7 +435,7 @@
     "DE#": "4.4.6",
     "Name": "VAMedicalServices",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -451,7 +451,7 @@
     "DE#": "4.4.7",
     "Name": "EmployerProvided",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -467,7 +467,7 @@
     "DE#": "4.4.8",
     "Name": "COBRA",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -483,7 +483,7 @@
     "DE#": "4.4.9",
     "Name": "PrivatePay",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -499,7 +499,7 @@
     "DE#": "4.4.10",
     "Name": "StateHealthIns",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -515,7 +515,7 @@
     "DE#": "4.39.2",
     "Name": "HIVAIDSAssistance",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -523,7 +523,7 @@
     "DE#": "4.39.A",
     "Name": "NoHIVAIDSAssistanceReason",
     "Type": "I",
-    "List": 4.39,
+    "List": "4.39",
     "Null": "Y",
     "Notes": ""
   },
@@ -531,7 +531,7 @@
     "DE#": "4.39.3",
     "Name": "ADAP",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -539,7 +539,7 @@
     "DE#": "4.39.B",
     "Name": "NoADAPReason",
     "Type": "I",
-    "List": 4.39,
+    "List": "4.39",
     "Null": "Y",
     "Notes": ""
   },
