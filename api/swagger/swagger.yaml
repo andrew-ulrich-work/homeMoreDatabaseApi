@@ -157,6 +157,31 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+  /follow:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: follow
+    post:
+      description: Follow a friend
+      operationId: follow
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: body
+          required: true
+          description: The id of the friend to follow
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Followed
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
   /atRisk/{label}:
     # binds a127 app logic to a route
     x-swagger-router-controller: showAtRisk
