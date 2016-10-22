@@ -303,21 +303,19 @@ definitions:
           type: string
           maxLength: 20
       stories:
-        type: object
-        properties:
-          text:
-            type: string
-          amountRaised:
-            type: integer
-            minimum: 0
-            maximum: 1000
-          amountNeeded:
-            type: integer
-            minimum: 0
-          dueDate:
-            type: integer
-            minimum: 0
-          contributors:
-            type: array
-            items:
+        type: array
+        items:
+          type: object
+          properties:
+            text:
               type: string
+            amountRaised:
+              type: integer
+              minimum: 0
+              maximum: 1000
+            amountNeeded:
+              type: integer
+              minimum: 0
+            dueDate:
+              type: integer
+              minimum: 0

@@ -1,21 +1,22 @@
 'use strict';
 var faker = require('json-schema-faker');
 var atRiskResponse = {
-	"atRiskResponse": {
-		"type": "object",
-		"properties": {
-			"description": {
+	"type": "object",
+	"properties": {
+		"description": {
+			"type": "string",
+			"maxLength": 40
+		},
+		"followers": {
+			"type": "array",
+			"items": {
 				"type": "string",
-				"maxLength": 40
-			},
-			"followers": {
-				"type": "array",
-				"items": {
-					"type": "string",
-					"maxLength": 20
-				}
-			},
-			"stories": {
+				"maxLength": 20
+			}
+		},
+		"stories": {
+			"type": "array",
+			"items": {
 				"type": "object",
 				"properties": {
 					"text": {
@@ -33,22 +34,17 @@ var atRiskResponse = {
 					"dueDate": {
 						"type": "integer",
 						"minimum": 0
-					},
-					"contributors": {
-						"type": "array",
-						"items": {
-							"type": "string"
-						}
 					}
 				},
         "required":["text","amountRaised","amountNeeded","dueDate","contributors"]
 			}
-		},
-    "required":["description","followers","stories"]
-	}
-};
+		}
+	},
+  "required":["description","followers","stories"]
+}
 module.exports = {
-  showAllAtRisk: showAllAtRisk
+  showAllAtRisk: showAllAtRisk,
+  show:show
 };
 
 function show(req,res) {
