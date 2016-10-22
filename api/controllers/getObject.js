@@ -10,8 +10,7 @@
 
   It is a good idea to list the modules that your application depends on in the package.json in the project root
  */
-var faker = require('json-schema-faker');
-var donationRequestSchema = require('../../json/donationRequestFaker.json')
+var makeSchema = require('../../makeSchema');
 /*
  Once you 'require' a module you can reference the things that it exports.  These are defined in module.exports.
 
@@ -25,20 +24,40 @@ var donationRequestSchema = require('../../json/donationRequestFaker.json')
   we specify that in the exports of this module that 'hello' maps to the function named 'hello'
  */
 module.exports = {
-  getDonationRequest: getDonationRequest
+  getObject: getObject,
+  getObjectList:getObjectList
 };
 
-/*
-  Functions in a127 controllers used for operations should take two parameters:
-
-  Param 1: a handle to the request object
-  Param 2: a handle to the response object
- */
-function getDonationRequest(req, res) {
-  // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  var phone = req.swagger.params.phone.value || 'stranger';
-  var fakeData=faker(donationRequestSchema);
-  fakeData.phone=phone;
-  // this sends back a JSON response which is a single string
-  res.json(fakeData);
+function getObject(req,res) {
+  var label = req.swagger.params.label.value;
+  if(label) {
+    label=label.toLowerCase();
+    var jsonDescription=require('../../json/'+label+'.json');
+    var fakeData=makeSchema.makeFakeData(jsonDescription);
+    res.json(fakeData);
+  } else {
+    res.json({});
+  }
+  
+}
+function getObjectList(req,res) {
+  res.json([
+      "Enrollment",
+      "Export",
+      "Organization",
+      "Project",
+      "Funder",
+      "ProjectCoC",
+      "Inventory",
+      "Aite",
+      "Affiliation",
+      "Client",
+      "EnrollmentCoC",
+      "Exit",
+      "IncomeBenefits",
+      "HealthAndDv",
+      "EmploymentEducation",
+      "Disabilities",
+      "Services"
+    ]);
 }

@@ -25,6 +25,8 @@ paths:
       description: Returns a donation request to the caller
       # used as the method name of the controller
       operationId: getDonationRequest
+      produces:
+        - application/json
       parameters:
         - name: phone
           in: query
@@ -38,6 +40,93 @@ paths:
           schema:
             # a pointer to a definition
             $ref: "#/definitions/getDonationRequestsResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /enum:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: enum
+    get:
+      description: Returns an enum request to the caller
+      operationId: getEnumList
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/enumAllResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /getObject:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: getObject
+    get:
+      description: Returns a list of available HUD HMIS-compliant json objects
+      operationId: getObjectList
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: array
+            items:
+              type: string
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /getObject/{label}:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: getObject
+    get:
+      description: Returns a list of available HUD HMIS-compliant json objects
+      operationId: getObject
+      produces:
+        - application/json
+      parameters:
+        - name: label
+          in: path
+          type: string
+          required: true
+          description: The name of the object you want
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: object
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /enum/{label}:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: enum
+    get:
+      description: Returns an enum request to the caller
+      operationId: getEnumByLabel
+      produces:
+        - application/json
+      parameters:
+        - name: label
+          in: path
+          type: string
+          required: true
+          description: The name of the field you want
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/enumResponse"
         # responses may fall through to errors
         default:
           description: Error
@@ -72,4 +161,14 @@ definitions:
     - billAmt
     - dueDate
     - story
-
+  enumResponse:
+    type: object
+    properties:
+      name:
+        type: string
+      map:
+        type: object
+  enumAllResponse:
+    type: array
+    items:
+      $ref: "#/definitions/enumResponse"

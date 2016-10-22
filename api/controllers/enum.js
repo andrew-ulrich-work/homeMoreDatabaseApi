@@ -10,8 +10,7 @@
 
   It is a good idea to list the modules that your application depends on in the package.json in the project root
  */
-var faker = require('json-schema-faker');
-var donationRequestSchema = require('../../json/donationRequestFaker.json')
+var enumRefsObject = require('../../json/enumRefs.json');
 /*
  Once you 'require' a module you can reference the things that it exports.  These are defined in module.exports.
 
@@ -25,20 +24,49 @@ var donationRequestSchema = require('../../json/donationRequestFaker.json')
   we specify that in the exports of this module that 'hello' maps to the function named 'hello'
  */
 module.exports = {
-  getDonationRequest: getDonationRequest
+  getEnumByLabel: getEnumByLabel,
+  getEnumList: getEnumList
 };
 
-/*
-  Functions in a127 controllers used for operations should take two parameters:
-
-  Param 1: a handle to the request object
-  Param 2: a handle to the response object
- */
-function getDonationRequest(req, res) {
-  // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  var phone = req.swagger.params.phone.value || 'stranger';
-  var fakeData=faker(donationRequestSchema);
-  fakeData.phone=phone;
-  // this sends back a JSON response which is a single string
-  res.json(fakeData);
+function getEnumList(req,res) {
+  var returnArray=[];
+  for(var label in enumRefsObject) {
+    returnArray.push(makeEnumResponse(label,enumRefsObject[label]));
+  }
+  res.json(returnArray);
 }
+
+function makeEnumResponse(label,enumRefObject) {
+  var returnData={
+      name:label,
+      map:{}
+    };
+    for(var value in enumRefObject) {
+      returnData.map[value]=enumRefObject[value];
+    }
+  return returnData;
+}
+
+function getEnumByLabel(req, res) {
+  // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
+  var label = req.swagger.params.label.value || 'stranger';
+  var enumRefObject=enumRefsObject[label];
+  var returnData={};
+  if(enumRefObject) {
+    returnData=makeEnumResponse(label,enumRefObject);
+  }
+  // this sends back a JSON response which is a single string
+  res.json(returnData);
+}
+
+// function getEnumByLabelAndNumber(req, res) {
+  // var label = req.swagger.params.label.value || 'stranger';
+  // var number = req.swagger.params.number.value || 0;
+  // var enumRefObject=enumRefsObject[label];
+  // var returnData={};
+  // if(enumRefObject) {
+    // var value=enumRefObject[number];
+    // returnData({value:value});
+  // }
+  // res.json(returnData);
+// }
