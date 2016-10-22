@@ -1,5 +1,5 @@
 var makeSchema = require('./makeSchema.js');
-var enrollment=require('./json/enrollment');
+var enrollment=require('./json/organization');
 
-var schema=makeSchema(enrollment);
+var schema=makeSchema.makeFormSchema(enrollment);
 console.log(JSON.stringify(schema,null,2));

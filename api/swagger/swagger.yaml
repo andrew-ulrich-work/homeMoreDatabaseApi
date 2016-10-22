@@ -132,6 +132,56 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+  /donate:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: handleDonation
+    post:
+      description: Receive a donation
+      operationId: receive
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: amount
+          in: body
+          required: true
+          description: The amount in dollars to donate
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Donation Accepted
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /atRisk/{label}:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: showAtRisk
+    get:
+      description: Returns an at risk person's info
+      operationId: show
+      produces:
+        - application/json
+      parameters:
+        - name: label
+          in: path
+          type: string
+          required: true
+          description: The name of the field you want
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/atRiskResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
@@ -172,3 +222,33 @@ definitions:
     type: array
     items:
       $ref: "#/definitions/enumResponse"
+  atRiskResponse:
+    type: object
+    properties:
+      description:
+        type: string
+        maxLength: 40
+      followers:
+        type: array
+        items:
+          type: string
+          maxLength: 20
+      stories:
+        type: object
+        properties:
+          text:
+            type: string
+          amountRaised:
+            type: integer
+            minimum: 0
+            maximum: 1000
+          amountNeeded:
+            type: integer
+            minimum: 0
+          dueDate:
+            type: integer
+            minimum: 0
+          contributors:
+            type: array
+            items:
+              type: string

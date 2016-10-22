@@ -16,7 +16,7 @@
     "Notes": ""
   },
   {
-    "Name#":  "OrganizationCommonName",
+    "Name":  "OrganizationCommonName",
     "Type": "S50",
     "DE#": "",
     "List": "",
@@ -32,7 +32,7 @@
     "Notes": ""
   },
   {
-    "Name#":  "DateUpdated",
+    "Name":  "DateUpdated",
     "Type": "T",
     "DE#": "",
     "List": "",

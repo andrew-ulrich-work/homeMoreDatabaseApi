@@ -37,6 +37,13 @@ function makeSchema(jsonDescription) {
       innerSchema.type='integer';
       if(rowDescript.List) {
         var enumObj = enumRefsObject[rowDescript.Name];
+        if(rowDescript.List=='1.7') {
+          //
+          enumObj = enumRefsObject['No/Yes/Missing'];
+        } else if(rowDescript.List=='1.8') {
+          enumObj = enumRefsObject['No/Yes/Reasons for Missing Data'];
+        }
+        
         innerSchema.enum=[];
         for(var val in enumObj) {
           innerSchema.enum.push(val);
@@ -59,8 +66,52 @@ function makeFakeData(jsonDescription) {
   var fakeData=faker(schema);
   return fakeData;
 }
-//TODO make makeFormSchema to make cool form fields
+
+function makeFormSchema(jsonDescription) {
+  var schema=makeSchema(jsonDescription);
+  formSchema={
+    schema:schema.properties,
+    form:[]
+  }
+  jsonDescription.forEach((rowDescript)=>{
+    var innerSchema={
+      key:rowDescript.Name
+    };
+    if(rowDescript.Type=='D') {
+      innerSchema.type='date';
+    } else if(rowDescript.Type=='T') {
+      innerSchema.type='datetime-local';
+    } else if(rowDescript.Type.indexOf('S')==0) {
+      innerSchema.type='text';
+      switch(rowDescript.Name) {
+        case 'SourceContactPhone':
+          innerSchema.type='tel';
+          break;
+        case 'SourceContactEmail':
+          innerSchema.type='email'
+          break;
+      }
+    } else if(rowDescript.Type=='I') {
+      var enumObj = enumRefsObject[rowDescript.Name];
+        if(rowDescript.List=='1.7') {
+          enumObj = enumRefsObject['No/Yes/Missing'];
+          innerSchema.titleMap= enumObj;
+        } else if(rowDescript.List=='1.8') {
+          enumObj = enumRefsObject['No/Yes/Reasons for Missing Data'];
+          innerSchema.titleMap= enumObj;
+        } else {
+          innerSchema.type='number';
+        }
+      
+    }
+    
+    formSchema.form.push(innerSchema);
+  });
+  return formSchema;
+}
+
 module.exports={
   makeSchema:makeSchema,
-  makeFakeData:makeFakeData
+  makeFakeData:makeFakeData,
+  makeFormSchema:makeFormSchema
 }
