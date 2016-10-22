@@ -75,7 +75,7 @@
     "DE#": "3.8.1",
     "Name": "DisablingCondition",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -83,7 +83,7 @@
     "DE#": "3.17.1",
     "Name": "ContinuouslyHomelessOneYear",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -115,7 +115,7 @@
     "DE#": "3.17.4",
     "Name": "StatusDocumented",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -139,7 +139,7 @@
     "DE#": "4.17.1",
     "Name": "InPermanentHousing",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -163,7 +163,7 @@
     "DE#": "4.20.2",
     "Name": "ClientEnrolledInPATH",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -179,7 +179,7 @@
     "DE#": "4.40.1",
     "Name": "WorstHousingSituation",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -243,7 +243,7 @@
     "DE#": "4.22.2",
     "Name": "FYSBYouth",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -267,7 +267,7 @@
     "DE#": "4.31.1",
     "Name": "FormerWardChildWelfare",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -291,7 +291,7 @@
     "DE#": "4.32.1",
     "Name": "FormerWardJuvenileJustice",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -315,7 +315,7 @@
     "DE#": "4.33.1",
     "Name": "HouseholdDynamics",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -323,7 +323,7 @@
     "DE#": "4.33.2",
     "Name": "SexualOrientationGenderIDYouth",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -331,7 +331,7 @@
     "DE#": "4.33.3",
     "Name": "SexualOrientationGenderIDFam",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -339,7 +339,7 @@
     "DE#": "4.33.4",
     "Name": "HousingIssuesYouth",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -347,7 +347,7 @@
     "DE#": "4.33.5",
     "Name": "HousingIssuesFam",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -355,7 +355,7 @@
     "DE#": "4.33.6",
     "Name": "SchoolEducationalIssuesYouth",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -363,7 +363,7 @@
     "DE#": "4.33.7",
     "Name": "SchoolEducationalIssuesFam",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -371,7 +371,7 @@
     "DE#": "4.33.8",
     "Name": "UnemploymentYouth",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -379,7 +379,7 @@
     "DE#": "4.33.9",
     "Name": "UnemploymentFam",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -387,7 +387,7 @@
     "DE#": "4.33.10",
     "Name": "MentalHealthIssuesYouth",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -395,7 +395,7 @@
     "DE#": "4.33.11",
     "Name": "MentalHealthIssuesFam",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -403,7 +403,7 @@
     "DE#": "4.33.12",
     "Name": "HealthIssuesYouth",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -411,7 +411,7 @@
     "DE#": "4.33.13",
     "Name": "HealthIssuesFam",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -419,7 +419,7 @@
     "DE#": "4.33.14",
     "Name": "PhysicalDisabilityYouth",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -427,7 +427,7 @@
     "DE#": "4.33.15",
     "Name": "PhysicalDisabilityFam",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -435,7 +435,7 @@
     "DE#": "4.33.16",
     "Name": "MentalDisabilityYouth",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -443,7 +443,7 @@
     "DE#": "4.33.17",
     "Name": "MentalDisabilityFam",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -451,7 +451,7 @@
     "DE#": "4.33.18",
     "Name": "AbuseAndNeglectYouth",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -459,7 +459,7 @@
     "DE#": "4.33.19",
     "Name": "AbuseAndNeglectFam",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -467,7 +467,7 @@
     "DE#": "4.33.20",
     "Name": "AlcoholDrugAbuseYouth",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -475,7 +475,7 @@
     "DE#": "4.33.21",
     "Name": "AlcoholDrugAbuseFam",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -483,7 +483,7 @@
     "DE#": "4.33.22",
     "Name": "InsufficientIncome",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -491,7 +491,7 @@
     "DE#": "4.33.23",
     "Name": "ActiveMilitaryParent",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -499,7 +499,7 @@
     "DE#": "4.33.24",
     "Name": "IncarceratedParent",
     "Type": "I",
-    "List": 1.7,
+    "List": "1.7",
     "Null": "Y",
     "Notes": ""
   },
@@ -531,7 +531,7 @@
     "DE#": "4.35.1",
     "Name": "ExchangeForSexPastThreeMonths",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },
@@ -547,7 +547,7 @@
     "DE#": "4.35.B",
     "Name": "AskedOrForcedToExchangeForSex",
     "Type": "I",
-    "List": 1.8,
+    "List": "1.8",
     "Null": "Y",
     "Notes": ""
   },

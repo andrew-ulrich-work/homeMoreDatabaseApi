@@ -38,7 +38,6 @@ function makeSchema(jsonDescription) {
       if(rowDescript.List) {
         var enumObj = enumRefsObject[rowDescript.Name];
         if(rowDescript.List=='1.7') {
-          //
           enumObj = enumRefsObject['No/Yes/Missing'];
         } else if(rowDescript.List=='1.8') {
           enumObj = enumRefsObject['No/Yes/Reasons for Missing Data'];

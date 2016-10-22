@@ -25,16 +25,29 @@ var makeSchema = require('../../makeSchema');
  */
 module.exports = {
   getObject: getObject,
+  getObjectFormSchema:getObjectFormSchema,
   getObjectList:getObjectList
 };
 
 function getObject(req,res) {
-  var label = req.swagger.params.label.value;
-  if(label) {
-    label=label.toLowerCase();
-    var jsonDescription=require('../../json/'+label+'.json');
+  var objectName = req.swagger.params.objectName.value;
+  if(objectName) {
+    objectName=objectName.toLowerCase();
+    var jsonDescription=require('../../json/'+objectName+'.json');
     var fakeData=makeSchema.makeFakeData(jsonDescription);
     res.json(fakeData);
+  } else {
+    res.json({});
+  }
+  
+}
+function getObjectFormSchema(req,res) {
+  var objectName = req.swagger.params.objectName.value;
+  if(objectName) {
+    objectName=objectName.toLowerCase();
+    var jsonDescription=require('../../json/'+objectName+'.json');
+    var formSchema=makeSchema.makeFormSchema(jsonDescription);
+    res.json(formSchema);
   } else {
     res.json({});
   }

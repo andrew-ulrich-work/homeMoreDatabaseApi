@@ -83,7 +83,31 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
-  /getObject/{label}:
+  /getObjectFormSchema/{objectName}:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: getObject
+    get:
+      description: Returns a list of available HUD HMIS-compliant json objects
+      operationId: getObjectFormSchema
+      produces:
+        - application/json
+      parameters:
+        - name: objectName
+          in: path
+          type: string
+          required: true
+          description: The name of the object you want
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: object
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /getObject/{objectName}:
     # binds a127 app logic to a route
     x-swagger-router-controller: getObject
     get:
@@ -92,7 +116,7 @@ paths:
       produces:
         - application/json
       parameters:
-        - name: label
+        - name: objectName
           in: path
           type: string
           required: true
