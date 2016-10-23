@@ -294,6 +294,8 @@ definitions:
   atRiskResponse:
     type: object
     properties:
+      _id:
+        type: string
       fakeName:
         type: string
         maxLength: 20

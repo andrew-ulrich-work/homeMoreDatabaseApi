@@ -10,6 +10,10 @@ var faker = require('json-schema-faker');
 var atRiskResponse = {
 	"type": "object",
 	"properties": {
+    "_id":{
+      "type":"string",
+      "pattern":"/[\d\w]{30}/",
+    },
     "fakeName": {
 			"type": "string",
 			"enum":["Anne","Marie","Claire","Stella","Georgia","Virginia","Isabelle","Florence","Jane","Wanda","Ellen","Jenna","Rebecca","Sarah","Elizabeth","Bethany"]
