@@ -12,7 +12,7 @@ function handleDonation(req,res) {
       db.collection('atrisk').find({_id:id},(err,result)=> {
         if(result && !err) {
           var doc=result.toArray()[0];
-          db.collection('atrisk').update({_id:id},{$set:{amount:doc.amount+amount}},(err,result)=>{ res.end("Thank you for your donation!"); });
+          db.collection('atrisk').update({_id:id},{$set:{"stories[0].amount":doc.stories[0].amount+amount}},(err,result)=>{ res.end("Thank you for your donation!"); });
         }
         
       });
