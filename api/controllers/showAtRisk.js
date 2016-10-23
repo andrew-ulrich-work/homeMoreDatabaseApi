@@ -64,7 +64,7 @@ var atRiskResponse = {
             "maximum": 1477183160
 					}
 				},
-        "required":["title","text","amountRaised","amountNeeded","dueDate","contributors"]
+        "required":["title","text","amountRaised","amountNeeded","dueDate","createDate","contributors"]
 			}
 		}
 	},
