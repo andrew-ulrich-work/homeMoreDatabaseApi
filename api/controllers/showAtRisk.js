@@ -63,7 +63,7 @@ var atRiskResponse = {
 			}
 		}
 	},
-  "required":["fakeName","description","followers","stories"]
+  "required":["_id","fakeName","description","followers","stories"]
 }
 module.exports = {
   showAllAtRisk: showAllAtRisk,
