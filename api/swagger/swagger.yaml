@@ -294,6 +294,9 @@ definitions:
   atRiskResponse:
     type: object
     properties:
+      fakeName:
+        type: string
+        maxLength: 20
       description:
         type: string
         maxLength: 40
@@ -307,6 +310,8 @@ definitions:
         items:
           type: object
           properties:
+            title:
+              type: string
             text:
               type: string
             amountRaised:
