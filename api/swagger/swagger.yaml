@@ -158,21 +158,25 @@ paths:
             $ref: "#/definitions/ErrorResponse"
   /donate:
     # binds a127 app logic to a route
-    x-swagger-router-controller: handleDonation
+    x-swagger-router-controller: donate
     post:
       description: Receive a donation
-      operationId: receive
+      operationId: handleDonation
       consumes:
-        - application/json
+        - multipart/form-data
       produces:
         - application/json
       parameters:
         - name: amount
-          in: body
+          in: formData
           required: true
           description: The amount in dollars to donate
-          schema:
-            type: integer
+          type: integer
+        - name: _id
+          in: formData
+          required: true
+          description: The id of the at risk record
+          type: string
       responses:
         "204":
           description: Donation Accepted

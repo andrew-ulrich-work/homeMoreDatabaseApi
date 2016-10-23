@@ -1,5 +1,6 @@
 'use strict';
 var faker = require('json-schema-faker');
+const MongoClient = require('mongodb').MongoClient;
 // faker.format('name', function(gen, schema) {
   // return gen.faker.name.firstName();
 // });
@@ -45,13 +46,13 @@ var atRiskResponse = {
 					},
 					"amountRaised": {
 						"type": "integer",
-						"minimum": 0,
-						"maximum": 10
+						"minimum": 50,
+						"maximum": 100
 					},
 					"amountNeeded": {
 						"type": "integer",
-						"minimum": 10,
-            "maximum": 200
+						"minimum": 100,
+            "maximum": 150
 					},
 					"dueDate": {
 						"type": "integer",
@@ -62,7 +63,9 @@ var atRiskResponse = {
 						"type": "integer",
 						"minimum": 1476942072,
             "maximum": 1477183160
-					}
+					},
+          "minItems": 4,
+          "maxItems": 7
 				},
         "required":["title","text","amountRaised","amountNeeded","dueDate","createDate","contributors"]
 			}
