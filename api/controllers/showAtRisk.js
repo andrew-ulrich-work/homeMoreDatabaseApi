@@ -55,7 +55,7 @@ var atRiskResponse = {
 			}
 		}
 	},
-  "required":["name","description","followers","stories"]
+  "required":["fakeName","description","followers","stories"]
 }
 module.exports = {
   showAllAtRisk: showAllAtRisk,
