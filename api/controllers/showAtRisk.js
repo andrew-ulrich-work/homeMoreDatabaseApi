@@ -16,7 +16,8 @@ var atRiskResponse = {
 		},
 		"description": {
 			"type": "string",
-			"maxLength": 40
+			"maxLength": 40,
+      "enum":["Single Mother of 2","Single mother of 1","Survivor of Domestic Violence","Recent Immigrant","Elderly with health issues","suffers from chronic pain","suffers from chronic disease","recently divorced","trying to rebuild after rehab"]
 		},
 		"followers": {
 			"type": "array",
