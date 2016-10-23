@@ -64,11 +64,11 @@ var atRiskResponse = {
 						"minimum": 1476942072,
             "maximum": 1477183160
 					},
-          "minItems": 4,
-          "maxItems": 7
 				},
         "required":["title","text","amountRaised","amountNeeded","dueDate","createDate","contributors"]
-			}
+			},
+      "minItems": 4,
+      "maxItems": 7
 		}
 	},
   "required":["_id","fakeName","description","followers","stories"]
