@@ -6,7 +6,7 @@ module.exports = {
 
 function handleDonation(req,res) {
   var id =req.swagger.params._id.value;
-  var amount =req.swagger.params.amount.value;
+  var amount =parseInt(req.swagger.params.amount.value);
   MongoClient.connect('mongodb://master:globalhack6@ds063946.mlab.com:63946/globalhack',(err,db)=>{
     db.collection('donations').insert({amount:amount,clientId:id},(err,result)=>{
       db.collection('atrisk').find({_id:id},(err,result)=> {
