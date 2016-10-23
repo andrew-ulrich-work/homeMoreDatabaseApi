@@ -12,7 +12,7 @@ var atRiskResponse = {
 	"properties": {
     "_id":{
       "type":"string",
-      "pattern":"/[\d\w]{30}/",
+      "pattern":"[\d\w]{30}",
     },
     "fakeName": {
 			"type": "string",
