@@ -24,5 +24,5 @@ function handleDonation(req,res) {
       
     });
   });
-  res.json({message:"Thank you for your donation!"});
+  //res.json({message:"Thank you for your donation!"});
 }

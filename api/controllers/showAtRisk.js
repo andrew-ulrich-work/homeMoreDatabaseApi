@@ -79,19 +79,37 @@ module.exports = {
 };
 
 function show(req,res) {
-var fakeData=faker(atRiskResponse);
-//fakeData.fakeName=faker.name.firstName();
-//fakeData.stories.forEach((story)=>{ story.title=faker.hacker.phrase(); });
-  res.json(fakeData);
+//var fakeData=faker(atRiskResponse);
+var id =req.swagger.params._id.value;
+  MongoClient.connect('mongodb://master:globalhack6@ds063946.mlab.com:63946/globalhack',(err,db)=>{
+    db.collection('atrisk').find({_id:id},(err,result)=>{
+      if(result) {
+        result.forEach((doc)=>{
+          res.json(doc);
+        });
+      }
+    })
+  })
+  //res.json(fakeData);
 }
 
 function showAllAtRisk(req,res) {
-var fakeData=[];
-for(var i =0; i< 10; i++) {
-  var fakeRecord=faker(atRiskResponse)
+//var fakeData=[];
+// for(var i =0; i< 10; i++) {
+  // var fakeRecord=faker(atRiskResponse)
   //fakeRecord.fakeName=faker.name.firstName();
   //fakeRecord.stories.forEach((story)=>{ story.title=faker.hacker.phrase(); });
-  fakeData.push(fakeRecord);
-}
-  res.json(fakeData);
+  // fakeData.push(fakeRecord);
+// }
+MongoClient.connect('mongodb://master:globalhack6@ds063946.mlab.com:63946/globalhack',(err,db)=>{
+    db.collection('atrisk').find({},(err,result)=>{
+      if(result) {
+        result.toArray((err,stuff)=>{
+          console.log(stuff);
+          res.json(stuff);
+        });
+      }
+    })
+  })
+  //res.json(fakeData);
 }

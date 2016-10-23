@@ -210,7 +210,7 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
-  /atRisk/{label}:
+  /atRisk/{_id}:
     # binds a127 app logic to a route
     x-swagger-router-controller: showAtRisk
     get:
@@ -219,11 +219,11 @@ paths:
       produces:
         - application/json
       parameters:
-        - name: label
+        - name: _id
           in: path
           type: string
           required: true
-          description: The name of the field you want
+          description: The id of the at risk person
       responses:
         "200":
           description: Success
