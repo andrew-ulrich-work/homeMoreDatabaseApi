@@ -1,10 +1,14 @@
 const enumRefsObject = require('./json/enumRefs.json');
 
 const DATE_REGEX='/[2][0][01][0-6]-1[0-2]-[1-2][0-9]/';
-const DATE_TIME_REGEX='/[2][0][01][0-6]-1[0-2]-[1-2][0-9]\\s[0-1][0-2]:[0-5]\\d:[0-5]\\d/';
+const DATE_TIME_REGEX='/[2][0][01][0-6]-1[0-2]-[1-2][0-9][ ][0-1][0-2]:[0-5]\\d:[0-5]\\d/';
 var atRiskResponse = {
 	"type": "object",
 	"properties": {
+    "_id":{
+      "type":"string",
+      "pattern":"[\d\w]{30}",
+    },
     "fakeName": {
 			"type": "string",
 			"enum":["Anne","Marie","Claire","Stella","Georgia","Virginia","Isabelle","Florence","Jane","Wanda","Ellen","Jenna","Rebecca","Sarah","Elizabeth","Bethany"]
@@ -28,7 +32,7 @@ var atRiskResponse = {
 				"properties": {
           "title": {
 						"type": "string",
-            "enum":['Electricity Bills', 'Overdue Bills', 'Legal Fees', 'Medical Fees', 'Educational Loans', 'Food Shortage']
+            "enum":['Electricity Bills', 'Overdue Bills', 'Legal Fees','Medical Fees', 'Educational Loans', 'Food Shortage']
 					},
 					"text": {
 						"type": "string",
@@ -48,13 +52,18 @@ var atRiskResponse = {
 						"type": "integer",
 						"minimum": 1477183160,
             "maximum": 1477958400
+					},
+          "createDate":{
+						"type": "integer",
+						"minimum": 1476942072,
+            "maximum": 1477183160
 					}
 				},
-        "required":["title","text","amountRaised","amountNeeded","dueDate","contributors"]
+        "required":["title","text","amountRaised","amountNeeded","dueDate","createDate","contributors"]
 			}
 		}
 	},
-  "required":["fakeName","description","followers","stories"]
+  "required":["_id","fakeName","description","followers","stories"]
 };
 const otherSchema={
   type:'object',

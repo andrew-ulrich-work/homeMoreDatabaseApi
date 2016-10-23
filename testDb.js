@@ -20,11 +20,32 @@ var collections=[
 'projectcoc',
 'services'
 ];
+var colsToIdName={
+'organization':'OrganizationID',
+'project':'ProjectID',
+'projectcoc':'CoCCode',
+'client':'PersonalID',
+'enrollment':'ProjectEntryID'
+}
+function replaceId(data,idName,collectionName) {
+  console.log(collectionName)
+  if(data[idName]) {
+      var ids=JSON.parse(fs.readFileSync('./IDs/'+collectionName+'.json'));
+      if(ids) {
+        data[idName]=ids[Math.floor(Math.random()*ids.length-1)];
+      }
+    }
+}
+
 function makeData(numRecords,collection) {
   var returnData=[];
   for(var i=0;i<numRecords;i++) {
     var jsonDesc=require('./json/'+collection+'.json');
-    returnData.push(makeSchema.makeFakeData(jsonDesc));
+    var data=makeSchema.makeFakeData(jsonDesc);
+    for(var col in colsToIdName) {
+      replaceId(data,colsToIdName[col],col);
+    }
+    returnData.push(data);
   }
   return returnData;
 }
@@ -47,9 +68,23 @@ MongoClient.connect('mongodb://master:globalhack6@ds063946.mlab.com:63946/global
       // db.collection('organization').find(')
     // }
     var callCount=0;
-    db.collection('enrollment').find({},(err,result)=>{
-      console.log(result);
+    collections.forEach((coll)=>{
+      db.collection(coll).find({},(err,result)=>{
+      var ids=[];
+      result.forEach((row)=>{
+       if(coll=='enrollment') console.log('"'+row._id+"\",")
+        ids.push(row._id); 
+      });
+      //console.log(ids);
+      //fs.writeFileSync('./IDs/'+coll+'.json',JSON.stringify(ids,null,2));
+      if(callCount == collections.length) {
+        db.close();
+      } else {
+        callCount++;
+      }
     });
+    });
+    
   }
   db.close();
 });

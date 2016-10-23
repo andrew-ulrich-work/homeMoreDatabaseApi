@@ -9,6 +9,7 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.12.3",
+    "json-2-csv": "^2.1.0",
     "json-schema-faker": "^0.3.6",
     "mongodb": "^2.2.11",
     "swagger-express-mw": "^0.1.0"
