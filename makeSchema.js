@@ -82,6 +82,7 @@ const otherSchema={
   },
   required:['DOB','MiddleName','FirstName','LastName','phone']
 };
+
 //has the following fields:
 //DE#,Name,Type,List,Null,Notes
 //following types: D=date, T=dateTime,I=Integer,M=Money,M+=positive money,S#=string
