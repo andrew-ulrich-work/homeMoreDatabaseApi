@@ -33,10 +33,11 @@ var atRiskResponse = {
 				"properties": {
           "title": {
 						"type": "string",
-            "enum":["I need to pay my utility bill","my car got reposessed!","I can't get to work","I am near my wits' end", "Please help me","Just need a little help","My car broke down","Someone broke into our house","I was robbed","I am getting help","I can't seem to get back on track","Too many bills to keep up","Truly drowning in debt"]
+            "enum":['Electricity Bills', 'Overdue Bills', 'Legal Fees, Medical Fees', 'Educational Loans', 'Food Shortage']
 					},
 					"text": {
-						"type": "string"
+						"type": "string",
+            "enum":['I can’t seem to get back on track and resort to substances abuse to destress', 'My parents need assistance since my mom just had a stroke and I just can’t see to make ends meet', 'If I can just pay this month\'s bill, next month my brother said he would hook me up with a job', 'My one year old kid needs surgery and that’s pretty much going to bankrupt me', 'I have a mental disorder that prevents me from communicating face to face in a meaningful way, and that prevents me from getting a job most of the time']
 					},
 					"amountRaised": {
 						"type": "integer",

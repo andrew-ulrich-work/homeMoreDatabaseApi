@@ -1,7 +1,8 @@
 const enumRefsObject = require('./json/enumRefs.json');
+const Faker = require('Faker');
 
-const DATE_REGEX='/\\d{4}-\\d{2}-\\d{2}/';
-const DATE_TIME_REGEX='/\\d{4}-\\d{2}-\\d{2}\\s\\d\\d:\\d\\d:\\d\\d/';
+const DATE_REGEX='/[2][0][01][0-6]-1[0-2]-[1-2][0-9]/';
+const DATE_TIME_REGEX='/[2][0][01][0-6]-1[0-2]-[1-2][0-9]\\s[0-1][0-2]:[0-5]\\d:[0-5]\\d/';
 //has the following fields:
 //DE#,Name,Type,List,Null,Notes
 //following types: D=date, T=dateTime,I=Integer,M=Money,M+=positive money,S#=string
@@ -63,6 +64,13 @@ function makeFakeData(jsonDescription) {
   var schema=makeSchema(jsonDescription);
   var schemaString = JSON.stringify(schema,null,2).replace('/','');
   var fakeData=faker(schema);
+  if(fakeData['DOB']) { fakeData['DOB']=(Math.floor(Math.random()*50)+1950)+fakeData.substring(4); }
+  if(fakeData['FirstName']) { 
+  fakeData['FirstName']=Faker.Name.firstName();
+  fakeData['MiddleName']=Faker.Name.firstName();
+  fakeData['LastName']=Faker.Name.lastName();
+  fakeData['Phone']=Faker.PhoneNumber.phoneNumber();
+  }
   return fakeData;
 }
 
