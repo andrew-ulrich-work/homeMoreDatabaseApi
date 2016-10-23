@@ -5,6 +5,8 @@ var app = require('express')();
 module.exports = app; // for testing
 
 var config = {
+  swaggerURL: './asdf',
+  swaggerUI:'./fdsa',
   appRoot: __dirname // required config
 };
 
