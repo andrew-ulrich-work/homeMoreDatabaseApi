@@ -33,7 +33,7 @@ function makeData(numRecords,collection) {
 collections.forEach((coll)=>{
   fs.writeFileSync('./fakeData/'+coll+'.json',makeData(10,coll));
 });
-
+//asdf
 function getIds() {}
 MongoClient.connect('mongodb://master:globalhack6@ds063946.mlab.com:63946/globalhack',(err,db)=>{
   if(err) {
