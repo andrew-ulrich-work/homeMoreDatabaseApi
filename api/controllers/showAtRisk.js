@@ -45,7 +45,7 @@ var atRiskResponse = {
 					},
 					"amountNeeded": {
 						"type": "integer",
-						"minimum": 10
+						"minimum": 10,
             "maximum": 200
 					},
 					"dueDate": {
