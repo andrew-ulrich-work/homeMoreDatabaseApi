@@ -28,7 +28,7 @@ var atRiskResponse = {
 				"properties": {
           "title": {
 						"type": "string",
-            "enum":['Electricity Bills', 'Overdue Bills', 'Legal Fees, Medical Fees', 'Educational Loans', 'Food Shortage']
+            "enum":['Electricity Bills', 'Overdue Bills', 'Legal Fees', 'Medical Fees', 'Educational Loans', 'Food Shortage']
 					},
 					"text": {
 						"type": "string",
