@@ -57,6 +57,11 @@ var atRiskResponse = {
 						"type": "integer",
 						"minimum": 1477183160,
             "maximum": 1477958400
+					},
+          "createDate":{
+						"type": "integer",
+						"minimum": 1476942072,
+            "maximum": 1477183160
 					}
 				},
         "required":["title","text","amountRaised","amountNeeded","dueDate","contributors"]

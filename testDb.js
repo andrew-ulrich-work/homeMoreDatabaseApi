@@ -6,7 +6,6 @@ var collections=[
 'affiliation',
 'client',
 'disabilities',
-'donationRequest',
 'employmentEducation',
 'enrollment',
 'enrollmentcoc',
@@ -27,13 +26,12 @@ function makeData(numRecords,collection) {
     var jsonDesc=require('./json/'+collection+'.json');
     returnData.push(makeSchema.makeFakeData(jsonDesc));
   }
-  console.log(returnData)
   return returnData;
 }
 collections.forEach((coll)=>{
-  fs.writeFileSync('./fakeData/'+coll+'.json',makeData(10,coll));
+  fs.writeFileSync('./fakeData/'+coll+'.json',JSON.stringify(makeData(10,coll),null,2));
 });
-//asdf
+
 function getIds() {}
 MongoClient.connect('mongodb://master:globalhack6@ds063946.mlab.com:63946/globalhack',(err,db)=>{
   if(err) {
@@ -48,7 +46,10 @@ MongoClient.connect('mongodb://master:globalhack6@ds063946.mlab.com:63946/global
       // var data =makeData(10,'organization');
       // db.collection('organization').find(')
     // }
-    //db.collection('enrollment').insert(makeData(10,'organization'))
+    var callCount=0;
+    db.collection('enrollment').find({},(err,result)=>{
+      console.log(result);
+    });
   }
   db.close();
 });
