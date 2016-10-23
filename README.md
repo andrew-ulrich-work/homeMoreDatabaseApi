@@ -12,3 +12,5 @@ will list out the potential values of every enumerated field defined in the HUD 
 
 https://pacific-beach-41748.herokuapp.com/enum/{fieldName}
 will give you the specific field's details, e.g. https://pacific-beach-41748.herokuapp.com/enum/HealthStatus
+
+there area also a few new ones
